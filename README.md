@@ -25,3 +25,10 @@
 |------------|-------------------------------------------------------------------------------------------------------------------------------------|
 | Backend UX | Requiring `tt_content.header` makes records with "title" `[No title]` in list view belongs to the past                              |
 | Backend UX | `tt_content.header` with `tt_content.header_layout` set to "Hidden" `0` still allows disabled/hidden titles in the website frontend |
+
+# Frontend
+
+## Required packages
+
+* [`josefglatz/httpseverywhere`](https://github.com/josefglatz/httpseverywhere) (TYPO3 Middleware to force https as a
+  last fallback)
