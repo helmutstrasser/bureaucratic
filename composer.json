@@ -1,0 +1,42 @@
+{
+    "name": "josefglatz/bureaucratic",
+    "description": "Basics for professional TYPO3 projects",
+    "repository": {
+        "url": "https://github.com/josefglatz/bureaucratic.git"
+    },
+    "support": {
+        "issues": "https://github.com/josefglatz/bureaucratic/issues",
+        "source": "https://github.com/josefglatz/bureaucratic",
+        "docs": "https://docs.typo3.org/p/josefglatz/bureaucratic/main/en-us/"
+    },
+    "authors": [
+        {
+            "name": "Josef Glatz",
+            "email": "typo3@josefglatz.at",
+            "role": "Developer",
+            "homepage": "https://www.josefglatz.at"
+        }
+    ],
+    "type": "typo3-cms-extension",
+    "license": [
+        "GPL-2.0-or-later"
+    ],
+    "require": {
+        "php": "~8.0.0 || ~8.1.0",
+        "typo3/cms-core": "^11.5"
+    },
+    "replace": {
+        "typo3-ter/bureaucratic": "self.version"
+    },
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "Josefglatz\\Bureaucratic\\": "Classes/"
+        }
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "bureaucratic"
+        }
+    }
+}
