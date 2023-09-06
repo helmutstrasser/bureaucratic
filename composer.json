@@ -23,8 +23,8 @@
     ],
     "require": {
         "php": "^8.1",
-        "typo3/cms-core": "^11.5",
-        "josefglatz/httpseverywhere": "^dev-main || ^1"
+        "typo3/cms-core": "^11.5 || ^12.4",
+        "josefglatz/httpseverywhere": "*"
     },
     "replace": {
         "typo3-ter/bureaucratic": "self.version"
