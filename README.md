@@ -2,6 +2,8 @@
 
 Part of `professional_aspects`
 
+---
+
 # Backend
 
 ## Required fields for backend users
@@ -35,6 +37,19 @@ Part of `professional_aspects`
 |------------|-------------|-------------------------------------------------------------------------------------------------------------------------------------|
 | Backend UX | yes         | Requiring `tt_content.header` makes records with "title" `[No title]` in list view belongs to the past                              |
 | Backend UX | yes         | `tt_content.header` with `tt_content.header_layout` set to "Hidden" `0` still allows disabled/hidden titles in the website frontend |
+
+## Disabled backend functionality
+
+* No direct uploads in backend forms. An editor have to upload files within the
+  TYPO3 filelist module
+
+### What the hell?
+
+Haven direct upload forms in backend forms motivates lazy backend editors to not
+structure their assets (files). There are possibilities to add folders in the
+uplaod UI but most of the users do not take care of this things.
+
+---
 
 # Frontend
 

@@ -1,0 +1,6 @@
+// Disable direct uploads in backend forms
+setup.override {
+  edit_docModuleUpload = 0
+}
+setup.fields.edit_docModuleUpload.disabled = 1
+setup.fields.edit_docModuleUpload.disabled = 1
