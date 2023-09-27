@@ -2,6 +2,13 @@
 
 Part of `professional_aspects`
 
+# Overview
+
+- adopt backend related database fields for backend users
+- adopt tt_content database fields for a better list module overview
+- adopt User TsConfig to improve file/folder structure
+- add a http to https redirect middleware in the frontend
+
 ---
 
 # Backend
@@ -45,9 +52,9 @@ Part of `professional_aspects`
 
 ### What the hell?
 
-Haven direct upload forms in backend forms motivates lazy backend editors to not
-structure their assets (files). There are possibilities to add folders in the
-uplaod UI but most of the users do not take care of this things.
+Direct upload forms in backend forms motivates lazy backend editors to not
+structure their assets (files) in a folder structure. There are possibilities to
+add folders in the upload UI but most of the users do not use such features.
 
 ---
 
