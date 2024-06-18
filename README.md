@@ -8,6 +8,7 @@ Part of `professional_aspects`
 - adopt tt_content database fields for a better list module overview
 - adopt User TsConfig to improve file/folder structure
 - add a http to https redirect middleware in the frontend
+- add many backend users related commands to notify or delete backend user records
 
 ---
 
@@ -65,3 +66,45 @@ add folders in the upload UI but most of the users do not use such features.
 * [`josefglatz/httpseverywhere`](https://github.com/josefglatz/httpseverywhere) (
   TYPO3 Middleware to force https as a
   last fallback)
+
+---
+
+# CLI Commands
+
+## CLI commands for backend users
+
+This package comes with a bunch of schedulable CLI commands for managing and informing backend user records:
+
+### **Multi Factor Authentication related**
+
+- `typo3 bureaucratic:backend:notify-users-without-mfa` (and their need to activate it)
+- `typo3 bureaucratic:backend:disable-users-without-activated-mfa`
+
+### **Managing inactive records** (except some specific)
+
+- `typo3 bureaucratic:backend:notify-not-loggedin-users`
+- `typo3 bureaucratic:backend:notify-admin-about-not-loggedin-users`
+- `typo3 bureaucratic:backend:notify-customer-about-not-loggedin-users`
+- `typo3 bureaucratic:backend:notify-customer-about-disabled-users`
+
+#### Delete longlasting disabled users
+
+**Command**: `typo3 bureaucratic:backend:delete-longlasting-disabled-users`
+
+- argument to delete disabled records not modified since n days
+- argument to add where clause by usergroup id or exact usergroup column value
+- option to execute command in dry-run mode to list all affected records
+- report email of deleted records to specific email recipient(s)
+- notification email to affected user records
+  - with support of bcc recipients
+- exclude test users via env variable
+
+**Examples**
+
+- `typo3 bureaucratic:backend:delete-longlasting-disabled-users`
+
+
+### **Managing misc records**
+
+- `typo3 bureaucratic:backend:list-test-users`
+- `typo3 bureaucratic:backend:validate-users-email-address`
