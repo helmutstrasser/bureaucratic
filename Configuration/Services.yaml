@@ -7,6 +7,19 @@ services:
   JosefGlatz\Bureaucratic\:
     resource: '../Classes/*'
 
+  connection.backenduserservice.be_users:
+    class: 'TYPO3\CMS\Core\Database\Connection'
+    factory:
+      - '@TYPO3\CMS\Core\Database\ConnectionPool'
+      - 'getConnectionForTable'
+    arguments:
+      - 'be_users'
+
+  JosefGlatz\Bureaucratic\Services\BackendUserService:
+    public: true
+    arguments:
+      $connection: 'connection.backenduserservice.be_users'
+
   JosefGlatz\Bureaucratic\Services\EmailService:
     public: true
 
