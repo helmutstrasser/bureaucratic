@@ -1,0 +1,12 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  JosefGlatz\Bureaucratic\:
+    resource: '../Classes/*'
+
+  JosefGlatz\Bureaucratic\Services\EmailService:
+    public: true
+
