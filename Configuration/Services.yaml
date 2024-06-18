@@ -23,3 +23,10 @@ services:
   JosefGlatz\Bureaucratic\Services\EmailService:
     public: true
 
+  JosefGlatz\Bureaucratic\Commands\BackendUsers\DeleteLongLastingDisabledUsersCommand:
+    tags:
+      - name: 'console.command'
+        command: 'bureaucratic:backend:delete-longlasting-disabled-users'
+        description: 'Delete long lasting disabled backend users.'
+        schedulable: true
+
