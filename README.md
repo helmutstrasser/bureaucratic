@@ -17,7 +17,7 @@ Part of `professional_aspects`
 ## Required fields for backend users
 
 * realName (trim, required)
-* email (trim, required, email)
+* email (trim, required, email, unique)
 
 ### What the hell?
 
@@ -30,6 +30,7 @@ Part of `professional_aspects`
 | Security                     |             | Implement custom commands to delete TYPO3 backend users based on deny lists                                                                                                    |                                                    |
 | Reporting                    |             | Write custom commands to inform team members of not used backend editors                                                                                                       |                                                    |
 | Base for TYPO3 core features |             | Forgot password functionality → reduces support cases                                                                                                                          |                                                    |
+| Base for TYPO3 core features |             | Check for unique email addresses for backend users → solid base for forgot password functionality (use email subaddressing for multiple test accounts for one email account)   |                                                    |
 | Backend UX                   |             | Better UX in backend views history, or record info modals → real name is shown                                                                                                 |                                                    |
 | Backend UX                   |             | Improve UX by adding profile image for each real human editor or use ext:gravatar for automatic profile images                                                                 |                                                    |
 | Reflects real life           |             | Better overview of you much persons are really working as editors on the project                                                                                               |                                                    |
@@ -96,7 +97,7 @@ This package comes with a bunch of schedulable CLI commands for managing and inf
 - option to execute command in dry-run mode to list all affected records
 - report email of deleted records to specific email recipient(s)
 - notification email to affected user records
-  - with support of bcc recipients
+    - with support of bcc recipients
 - exclude test users via env variable
 
 **Examples**

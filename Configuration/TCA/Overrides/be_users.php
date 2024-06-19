@@ -12,7 +12,7 @@ call_user_func(
                 ],
                 'email' => [
                     'config' => [
-                        'eval' => 'trim,email,required',
+                        'eval' => 'trim,email,required,unique',
                     ],
                 ],
             ],
